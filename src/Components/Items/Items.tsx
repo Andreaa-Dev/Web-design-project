@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { DataType } from "../../data";
-// import { SvgIcon } from "@material-ui/core";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 
 const Card = styled.div`
   display: flex;
   flex-direction: column;
+  border: solid black 0.1rem;
+  margin-bottom: 1rem;
 `;
 const Img = styled.img`
   height: 20rem;
@@ -22,6 +25,7 @@ type ItemProps = {
   item: DataType;
 };
 function Items(props: ItemProps) {
+  const param = useParams();
   const [iconColor, setIconColor] = useState<"secondary">();
   const onClickHandler = () => {
     setIconColor("secondary");
@@ -31,7 +35,10 @@ function Items(props: ItemProps) {
     <div>
       <Card>
         <Img src={item.img} alt="error" />
-        <Button>More detail</Button>
+        {/* <Button> */}
+        <Link to={`/pages/${item.id}`}>More detail</Link>
+        {/* </Button> */}
+        <p>Description:{item.description}</p>
         <FavoriteIcon onClick={onClickHandler} color={iconColor} />
       </Card>
     </div>

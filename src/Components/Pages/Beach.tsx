@@ -4,7 +4,7 @@ import beach from "../Img&Video/Beach.mp4";
 // import styled from "styled-components"
 // const Card=styled.div`
 
-function Page1() {
+function Beach() {
   return (
     <div>
       <video
@@ -20,4 +20,4 @@ function Page1() {
   );
 }
 
-export default Page1;
+export default Beach;
