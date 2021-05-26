@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Card = styled.div`
   display: grid;
-  grid-template-columns: 5% 15% 15% 15%;
+  grid-template-columns: 5% 45% 35% 15%;
   justify-items: center;
   background-image: linear-gradient(to top, lightblue, #8ab6d6);
 `;
