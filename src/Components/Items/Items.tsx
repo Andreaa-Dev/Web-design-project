@@ -35,9 +35,9 @@ function Items(props: ItemProps) {
     <div>
       <Card>
         <Img src={item.img} alt="error" />
-        {/* <Button> */}
-        <Link to={`/pages/${item.id}`}>More detail</Link>
-        {/* </Button> */}
+        <Link to={`/pages/${item.id}`}>
+          <Button>More detail</Button>
+        </Link>
         <p>Description:{item.description}</p>
         <FavoriteIcon onClick={onClickHandler} color={iconColor} />
       </Card>
