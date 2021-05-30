@@ -11,12 +11,11 @@ const Card = styled.div`
   width: 100vw;
   background-color: black;
 `;
-const Title = styled.div`
+const Title = styled.h1`
   font-family: "Limelight", cursive;
   color: white;
   font-size: 2rem;
-  margin-top: 5rem;
-  /* margin: 2rem auto 3rem 1rem; */
+  margin: 2rem auto 3rem 1rem;
 `;
 const ImgCard = styled.div`
   display: flex;
@@ -25,8 +24,17 @@ const ImgCard = styled.div`
 `;
 
 const Img = styled.img`
-  height: 30rem;
-  width: 15rem;
+  height: 20rem;
+  width: 10rem;
+  cursor: pointer;
+  transition: 0.5s;
+  :hover {
+    transform: scale(1.2) translate(-10%, -10%);
+  }
+`;
+const Button = styled.button`
+  border: solid black;
+  border-radius: 2rem;
 `;
 function Roseanne() {
   return (
@@ -39,7 +47,7 @@ function Roseanne() {
         <Img src={watch4} alt="" />
         <Img src={watch5} alt="" />
       </ImgCard>
-      <button>More information</button>
+      <Button>More information</Button>
     </Card>
   );
 }
