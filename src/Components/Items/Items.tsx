@@ -8,18 +8,42 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-  border: solid black 0.1rem;
+  justify-content: center;
+  border: solid black 1px;
+  border-radius: 7px;
   margin-bottom: 1rem;
+  height: 25rem;
+  width: 30rem;
+  margin-bottom: 3rem;
 `;
 const Img = styled.img`
-  height: 20rem;
-  width: 35rem;
+  height: 12rem;
+  width: 20rem;
+  border: solid black 1px;
+  border-radius: 7px;
+  margin: 1rem auto 1rem auto;
 `;
 
 const Button = styled.button`
-  height: 3rem;
-  width: 7rem;
+  height: 2.5rem;
+  width: 6rem;
   border-radius: 1.2rem;
+  background-color: #2b2929;
+  color: white;
+`;
+
+const Icon = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+
+  justify-content: space-between;
+  margin: 1rem 5rem 1rem auto;
+`;
+
+const Text = styled.div`
+  margin: 1rem 5rem 1rem 5rem;
+  font-size: 1rem;
 `;
 type ItemProps = {
   item: DataType;
@@ -35,11 +59,14 @@ function Items(props: ItemProps) {
     <div>
       <Card>
         <Img src={item.img} alt="error" />
-        <Link to={`/pages/${item.id}`}>
-          <Button>More detail</Button>
-        </Link>
-        <p>Description:{item.description}</p>
-        <FavoriteIcon onClick={onClickHandler} color={iconColor} />
+        <Icon>
+          <Link to={`/pages/${item.id}`}>
+            <Button>Go to site</Button>
+          </Link>
+          <FavoriteIcon onClick={onClickHandler} color={iconColor} />
+        </Icon>
+
+        <Text>Description:{item.description}</Text>
       </Card>
     </div>
   );

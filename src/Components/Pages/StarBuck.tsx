@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import NavBar from "../NavBar/NavbarStarbuck";
-import CheeseCake from "../Img&Video/cheesecake.png";
-import Matcha from "../Img&Video/matcha.png";
-import Caramel from "../Img&Video/caramel.png";
-import FaceBook from "../Img&Video/facebook.png";
-import Instagram from "../Img&Video/instagram.png";
-import Twitter from "../Img&Video/twitter.png";
+import CheeseCake from "../Img&Video/StarBuck/cheesecake.png";
+import Matcha from "../Img&Video/StarBuck/matcha.png";
+import Caramel from "../Img&Video/StarBuck/caramel.png";
+import FaceBook from "../Img&Video/StarBuck/facebook.png";
+import Instagram from "../Img&Video/StarBuck/instagram.png";
+import Twitter from "../Img&Video/StarBuck/twitter.png";
 
 const Style = styled.div`
   display: flex;

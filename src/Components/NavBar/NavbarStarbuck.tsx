@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
-import Icon from "../Img&Video/starbuck-icon.png";
+import Icon from "../Img&Video/StarBuck/starbuck-icon.png";
 
 const Img = styled.img`
   height: 5rem;

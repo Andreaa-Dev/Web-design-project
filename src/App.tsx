@@ -12,11 +12,12 @@ import Pages from "./Components/Pages/Pages";
 const Card = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 3rem;
-  margin: 2rem auto 1rem 3rem;
+  grid-column-gap: 1rem;
+  margin-left: 6rem;
 `;
 const Title = styled.h1`
   text-align: center;
+  margin: 4rem auto 4rem auto;
 `;
 function App() {
   return (

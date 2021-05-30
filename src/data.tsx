@@ -1,7 +1,8 @@
 import StarBuck from "./Components/Img&Video/StarBucks.png";
+import Leica from "./Components/Img&Video/Camera.png";
+import Roseanne from "./Components/Img&Video/watch.png";
 import Smoothies from "./Components/Img&Video/Smoothies.png";
 import Beaches from "./Components/Img&Video/Beaches.jpg";
-import Camera from "./Components/Img&Video/Camera.png";
 
 export type DataType = {
   img: string;
@@ -10,9 +11,23 @@ export type DataType = {
 };
 
 const data: DataType[] = [
-  { img: StarBuck, description: "acb", id: 1 },
-  { img: Camera, description: "12341fwvw", id: 2 },
-  { img: Smoothies, description: "sss", id: 3 },
-  { img: Beaches, description: "frv", id: 4 },
+  {
+    img: StarBuck,
+    description: "Change background base on chosen items",
+    id: 1,
+  },
+  {
+    img: Leica,
+    description: "One color website. Simple but outstanding impression.",
+    id: 2,
+  },
+  {
+    img: Roseanne,
+    description: "The new watch",
+    id: 3,
+  },
+  { img: Smoothies, description: "COMING SOON...", id: 4 },
+
+  { img: Beaches, description: "Animate background", id: 5 },
 ];
 export default data;

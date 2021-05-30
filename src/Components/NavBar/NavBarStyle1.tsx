@@ -1,21 +1,38 @@
 import React from "react";
+import Bird from "../Img&Video/bird.png";
 
 import styled from "styled-components";
 
 const Card = styled.div`
-  display: grid;
-  grid-template-columns: 5% 45% 35% 15%;
+  display: flex;
+  flex-direction: row;
   justify-items: center;
-  background-image: linear-gradient(to top, lightblue, #8ab6d6);
+  background-color: #2b2929;
+  color: white;
+`;
+
+const Logo = styled.img`
+  height: 3rem;
+  width: 3rem;
+  margin: 1rem auto 1rem 1rem;
+`;
+const SmallNav = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 35rem;
 `;
 
 function NavBarStyle1() {
   return (
     <Card>
-      <p>HOME</p>
-      <p>About</p>
-      <p>Book</p>
-      <p>Contact</p>
+      <Logo src={Bird} alt="error" />
+      <SmallNav>
+        <p>HOME</p>
+        <p>ABOUT</p>
+        <p>FAVORITE</p>
+      </SmallNav>
     </Card>
   );
 }

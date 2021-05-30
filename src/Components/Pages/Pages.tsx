@@ -1,6 +1,7 @@
 import React from "react";
 import Beach from "./Beach";
-import Camera from "./Camera";
+import Leica from "./Leica";
+import Roseanne from "./Roseanne";
 import StarBuck from "./StarBuck";
 import Smoothies from "./Smoothies";
 import { useParams } from "react-router";
@@ -11,10 +12,14 @@ function Pages() {
   if (id === "1") {
     return <StarBuck />;
   }
+
   if (id === "2") {
-    return <Camera />;
+    return <Leica />;
   }
   if (id === "3") {
+    return <Roseanne />;
+  }
+  if (id === "4") {
     return <Smoothies />;
   } else {
     return <Beach />;
