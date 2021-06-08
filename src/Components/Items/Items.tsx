@@ -40,7 +40,9 @@ const Icon = styled.div`
   justify-content: space-between;
   margin: 1rem 5rem 1rem auto;
 `;
-
+const Title = styled.div`
+  font-size: 1.2rem;
+`;
 const Text = styled.div`
   margin: 1rem 5rem 1rem 5rem;
   font-size: 1rem;
@@ -58,6 +60,7 @@ function Items(props: ItemProps) {
   return (
     <div>
       <Card>
+        <Title>Name :{item.name}</Title>
         <Img src={item.img} alt="error" />
         <Icon>
           <Link to={`/pages/${item.id}`}>
