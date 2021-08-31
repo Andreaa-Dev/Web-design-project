@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
@@ -6,10 +7,9 @@ import TextField from "@material-ui/core/TextField";
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-
   border-bottom: solid 2px #aeabab;
   border-radius: 7px;
-  width: 50%;
+  width: 30%;
   margin: auto;
 `;
 
@@ -25,33 +25,46 @@ const Button = styled.button`
   color: white;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  margin-right: 1rem;
+  margin-left: 17rem;
 `;
 
 const useStyles = makeStyles((theme) => ({
   root: {
     "& .MuiTextField-root": {
-      margin: theme.spacing(2),
-      width: "15ch",
+      margin: theme.spacing(3),
+      width: "25ch",
     },
   },
 }));
+
 function Login() {
+  const [value, setValue] = useState("");
+  type EventType = {
+    event: any;
+  };
+  const handleChange = ({ event }: EventType) => {
+    setValue(event.target.value);
+  };
+
   return (
     <Card>
       <Title>LOG IN </Title>
-      <form noValidate autoComplete="off">
+      <form>
         <TextField
           id="standard-textarea"
           label="Name"
           placeholder="Name"
           multiline
         />
+      </form>
+      <form>
         <TextField
           id="standard-textarea"
           label="Email"
           placeholder="gmail.com"
           multiline
+          onChange={handleChange}
+          value={value}
         />
       </form>
       <Button>Log in</Button>
@@ -60,3 +73,5 @@ function Login() {
 }
 
 export default Login;
+
+// noValidate autoComplete="off"
