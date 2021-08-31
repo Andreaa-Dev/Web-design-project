@@ -1,6 +1,6 @@
 import StarBuck from "./Components/Img&Video/StarBucks.png";
 import Leica from "./Components/Img&Video/Camera.png";
-import Roseanne from "./Components/Img&Video/watch.png";
+import Roseanne from "./Components/Img&Video/Roseanne.png";
 import Smoothies from "./Components/Img&Video/Smoothies.png";
 import Beaches from "./Components/Img&Video/Beaches.jpg";
 import Trio from "./Components/Img&Video/IL-Trio Restaurant/IL-Trio.png";
@@ -22,11 +22,12 @@ const data: DataType[] = [
   {
     name: "Leica",
     img: Leica,
-    description: "One color website. Simple but outstanding impression.",
+    description:
+      "One color website. Simple but outstanding impression.Customized logo",
     id: 2,
   },
   { name: "Roseanne", img: Roseanne, description: "The new watch", id: 3 },
-  { name: "Trio", img: Trio, description: "Restaurant theme", id: 4 },
+  { name: "II Trio", img: Trio, description: "Restaurant theme", id: 4 },
   { name: "Smoothies", img: Smoothies, description: "COMING SOON...", id: 5 },
 
   { name: "Beaches", img: Beaches, description: "Animate background", id: 6 },

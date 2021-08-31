@@ -14,7 +14,7 @@ const MainCard = styled.div`
 const Text = styled.div`
   text-transform: uppercase;
   font-size: 4rem;
-  margin: 11rem auto 1rem 5rem;
+  margin: 9rem auto 1rem 5rem;
 `;
 const Button = styled.button`
   border: 1px solid white;

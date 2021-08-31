@@ -1,21 +1,16 @@
 import React from "react";
-import Bird from "../Img&Video/bird.png";
-
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Card = styled.div`
   display: flex;
   flex-direction: row;
-  justify-items: center;
-  background-color: #2b2929;
+  justify-content: space-between;
+  background-color: #000000;
+  background: linear-gradient(to top, black, #353434);
   color: white;
 `;
 
-const Logo = styled.img`
-  height: 3rem;
-  width: 3rem;
-  margin: 1rem auto 1rem 1rem;
-`;
 const SmallNav = styled.div`
   display: flex;
   flex-direction: row;
@@ -23,15 +18,27 @@ const SmallNav = styled.div`
   align-items: center;
   width: 35rem;
 `;
+const Logo = styled.h1`
+  font-family: "ZCOOL KuaiLe", cursive;
+`;
+
+const Button = styled.button`
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+`;
 
 function NavBarStyle1() {
   return (
     <Card>
-      <Logo src={Bird} alt="error" />
+      <Logo>ANDREA</Logo>
       <SmallNav>
-        <p>HOME</p>
-        <p>ABOUT</p>
-        <p>FAVORITE</p>
+        <Button>HOME</Button>
+        <Button>ABOUT US</Button>
+        <Button>FAVORITE</Button>
+        <Link to="/home/login">
+          <Button>LOG IN</Button>
+        </Link>
       </SmallNav>
     </Card>
   );
