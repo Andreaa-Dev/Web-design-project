@@ -33,7 +33,9 @@ function NavBarStyle1() {
     <Card>
       <Logo>ANDREA</Logo>
       <SmallNav>
-        <Button>HOME</Button>
+        <Link to="/">
+          <Button>HOME</Button>
+        </Link>
         <Button>ABOUT US</Button>
         <Button>FAVORITE</Button>
         <Link to="/home/login">

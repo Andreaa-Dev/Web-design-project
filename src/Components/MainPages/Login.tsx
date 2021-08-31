@@ -18,6 +18,9 @@ const Title = styled.h1`
 `;
 
 const Button = styled.button`
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
   height: 2rem;
   width: 5rem;
   border-radius: 1.2rem;
@@ -25,36 +28,34 @@ const Button = styled.button`
   color: white;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  margin-left: 17rem;
+  align-items: center;
+  padding: 0.5rem;
 `;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    "& .MuiTextField-root": {
-      margin: theme.spacing(3),
-      width: "25ch",
+    "& .TextField-root": {
+      width: "35ch",
     },
+  },
+  input: {
+    marginTop: "1rem",
   },
 }));
 
 function Login() {
-  const [value, setValue] = useState("");
-  type EventType = {
-    event: any;
-  };
-  const handleChange = ({ event }: EventType) => {
-    setValue(event.target.value);
-  };
+  const classes = useStyles();
 
   return (
     <Card>
       <Title>LOG IN </Title>
-      <form>
+      <form className={classes.root}>
         <TextField
           id="standard-textarea"
           label="Name"
-          placeholder="Name"
+          // placeholder="Enter your name here"
           multiline
+          className={classes.input}
         />
       </form>
       <form>
@@ -63,8 +64,7 @@ function Login() {
           label="Email"
           placeholder="gmail.com"
           multiline
-          onChange={handleChange}
-          value={value}
+          className={classes.input}
         />
       </form>
       <Button>Log in</Button>
