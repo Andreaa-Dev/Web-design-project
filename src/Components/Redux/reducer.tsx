@@ -1,6 +1,6 @@
 import { createReducer } from "@reduxjs/toolkit";
-
 import { addOrder } from "./action";
+
 import data, { DataType } from "../../data";
 
 type InitialStateType = {

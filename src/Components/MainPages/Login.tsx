@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
@@ -45,29 +44,34 @@ const useStyles = makeStyles((theme) => ({
 
 function Login() {
   const classes = useStyles();
+  const [userData, setUserData] = useState({ userName: "", email: "" });
+  const userDataHandler = (event: any) => {
+    setUserData({
+      ...userData,
+      [event.target.id]: event.target.value,
+    });
+  };
 
+  const submitHandler = () => {};
   return (
     <Card>
       <Title>LOG IN </Title>
-      <form className={classes.root}>
+      <form className={classes.root} onChange={userDataHandler}>
         <TextField
-          id="standard-textarea"
+          id="userName"
           label="Name"
-          // placeholder="Enter your name here"
           multiline
           className={classes.input}
         />
-      </form>
-      <form>
         <TextField
-          id="standard-textarea"
+          id="email"
           label="Email"
           placeholder="gmail.com"
           multiline
           className={classes.input}
         />
       </form>
-      <Button>Log in</Button>
+      <Button onClick={submitHandler}>Log in</Button>
     </Card>
   );
 }

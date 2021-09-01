@@ -1,6 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import HomeIcon from "@material-ui/icons/Home";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import LockOpenIcon from "@material-ui/icons/LockOpen";
+import InfoIcon from "@material-ui/icons/Info";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
 const Card = styled.div`
   display: flex;
@@ -34,15 +39,25 @@ function NavBarStyle1() {
       <Logo>ANDREA</Logo>
       <SmallNav>
         <Link to="/">
-          <Button>HOME</Button>
+          <Button>
+            <HomeIcon />
+          </Button>
         </Link>
-        <Button>ABOUT US</Button>
-        <Button>FAVORITE</Button>
+        <Button>
+          <InfoIcon />
+        </Button>
+        <Button>
+          <FavoriteIcon />
+        </Button>
         <Link to="/home/login">
-          <Button>LOG IN</Button>
+          <Button>
+            <LockOpenIcon />
+          </Button>
         </Link>
         <Link to="/home/account">
-          <Button>MY ACCOUNT</Button>
+          <Button>
+            <AccountCircleIcon />
+          </Button>
         </Link>
       </SmallNav>
     </Card>

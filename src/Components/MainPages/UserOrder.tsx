@@ -23,6 +23,8 @@ function UserOrder() {
       <Card>
         <NameItem>{item.name}</NameItem>
         <div>{item.price}</div>
+        <p>Shipping: 7.99$</p>
+        <p>Total: </p>
       </Card>
     );
   });

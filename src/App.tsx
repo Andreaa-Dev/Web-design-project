@@ -10,7 +10,7 @@ import NavBar1 from "./Components/NavBar/NavBarStyle1";
 import Items from "./Components/Items/Items";
 import Pages from "./Components/Pages/Pages";
 import Login from "./Components/MainPages/Login";
-import Account from "./Components/MainPages/Account";
+import UserAccount from "./Components/MainPages/UserAccount";
 
 const Card = styled.div`
   display: grid;
@@ -51,7 +51,7 @@ function App() {
           <Login />
         </Route>
         <Route exact path="/home/account">
-          <Account />
+          <UserAccount />
         </Route>
       </Switch>
     </div>
