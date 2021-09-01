@@ -10,6 +10,7 @@ import NavBar1 from "./Components/NavBar/NavBarStyle1";
 import Items from "./Components/Items/Items";
 import Pages from "./Components/Pages/Pages";
 import Login from "./Components/MainPages/Login";
+import Account from "./Components/MainPages/Account";
 
 const Card = styled.div`
   display: grid;
@@ -48,6 +49,9 @@ function App() {
         </Route>
         <Route exact path="/home/login">
           <Login />
+        </Route>
+        <Route exact path="/home/account">
+          <Account />
         </Route>
       </Switch>
     </div>

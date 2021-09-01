@@ -73,5 +73,3 @@ function Login() {
 }
 
 export default Login;
-
-// noValidate autoComplete="off"

@@ -41,6 +41,9 @@ function NavBarStyle1() {
         <Link to="/home/login">
           <Button>LOG IN</Button>
         </Link>
+        <Link to="/home/account">
+          <Button>MY ACCOUNT</Button>
+        </Link>
       </SmallNav>
     </Card>
   );

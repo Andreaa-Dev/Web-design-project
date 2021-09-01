@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { DataType } from "../../data";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import GetAppIcon from "@material-ui/icons/GetApp";
+import { addOrder } from "../Redux/action";
+import { useDispatch } from "react-redux";
 
 const Card = styled.div`
   display: flex;
@@ -53,6 +55,9 @@ function Items(props: ItemProps) {
     setIconColor("secondary");
   };
   const { item } = props;
+
+  const dispatch = useDispatch();
+
   return (
     <div>
       <Card>
@@ -62,8 +67,10 @@ function Items(props: ItemProps) {
           <Link to={`/pages/${item.id}`}>
             <Button>Explore</Button>
           </Link>
+          <p>{item.price}$</p>
           <FavoriteIcon onClick={onClickHandler} color={iconColor} />
           <GetAppIcon />
+          <button onClick={() => dispatch(addOrder(item.id))}> Add</button>
         </Icon>
       </Card>
     </div>
