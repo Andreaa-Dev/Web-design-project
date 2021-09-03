@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { DataType } from "../../data";
+
+import Fab from "@material-ui/core/Fab";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import GetAppIcon from "@material-ui/icons/GetApp";
-import { addOrder } from "../Redux/action";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import { addOrder, addFavItem } from "../Redux/action";
 import { useDispatch } from "react-redux";
 
 const Card = styled.div`
@@ -50,13 +53,14 @@ type ItemProps = {
 };
 
 function Items(props: ItemProps) {
+  const { item } = props;
+  const dispatch = useDispatch();
+
   const [iconColor, setIconColor] = useState<"secondary">();
   const onClickHandler = () => {
     setIconColor("secondary");
+    dispatch(addOrder(item.id));
   };
-  const { item } = props;
-
-  const dispatch = useDispatch();
 
   return (
     <div>
@@ -68,9 +72,15 @@ function Items(props: ItemProps) {
             <Button>Explore</Button>
           </Link>
           <p>{item.price}$</p>
-          <FavoriteIcon onClick={onClickHandler} color={iconColor} />
-          <GetAppIcon />
-          <button onClick={() => dispatch(addOrder(item.id))}> Add</button>
+          <Fab size="small">
+            <FavoriteIcon color={iconColor} onClick={onClickHandler} />
+          </Fab>
+          <Fab size="small">
+            <GetAppIcon />
+          </Fab>
+          <Fab size="small">
+            <ShoppingCartIcon onClick={() => dispatch(addOrder(item.id))} />
+          </Fab>
         </Icon>
       </Card>
     </div>

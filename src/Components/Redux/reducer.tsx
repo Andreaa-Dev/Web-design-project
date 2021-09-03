@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { addOrder } from "./action";
+import { addOrder, addFavItem } from "./action";
 
 import data, { DataType } from "../../data";
 
@@ -14,6 +14,15 @@ const initialState: InitialStateType = {
 };
 const orderReducer = createReducer(initialState, (builder) => {
   builder.addCase(addOrder, (state, action) => {
+    const id = action.payload;
+    const product = state.products.find((item) => {
+      return item.id === id;
+    });
+    if (product === undefined) return;
+    state.cart.push(product);
+  });
+
+  builder.addCase(addFavItem, (state, action) => {
     const id = action.payload;
     const product = state.products.find((item) => {
       return item.id === id;

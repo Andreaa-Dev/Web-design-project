@@ -11,6 +11,7 @@ import Items from "./Components/Items/Items";
 import Pages from "./Components/Pages/Pages";
 import Login from "./Components/MainPages/Login";
 import UserAccount from "./Components/MainPages/UserAccount";
+import UserFav from "./Components/MainPages/UserFav";
 
 const Card = styled.div`
   display: grid;
@@ -52,6 +53,9 @@ function App() {
         </Route>
         <Route exact path="/home/account">
           <UserAccount />
+        </Route>
+        <Route exact path="/home/favorite">
+          <UserFav />
         </Route>
       </Switch>
     </div>

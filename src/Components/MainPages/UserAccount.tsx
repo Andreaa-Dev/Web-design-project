@@ -24,10 +24,10 @@ function UserAccount() {
       <Title>Your account</Title>
       <Card>
         <Item>User information: Name, DOB, Address</Item>
+        <Item>Favorite</Item>
         <Item>
           Your order: <UserOrder />
         </Item>
-        <Item>Favorite</Item>
       </Card>
     </div>
   );

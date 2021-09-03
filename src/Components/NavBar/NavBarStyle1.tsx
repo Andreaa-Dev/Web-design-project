@@ -46,9 +46,11 @@ function NavBarStyle1() {
         <Button>
           <InfoIcon />
         </Button>
-        <Button>
-          <FavoriteIcon />
-        </Button>
+        <Link to="/home/favorite">
+          <Button>
+            <FavoriteIcon />
+          </Button>
+        </Link>
         <Link to="/home/login">
           <Button>
             <LockOpenIcon />
