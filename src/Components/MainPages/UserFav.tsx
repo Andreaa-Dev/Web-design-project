@@ -1,14 +1,21 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../Redux/store";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import styled from "styled-components";
 
+const Title = styled.h1`
+  text-align: center;
+`;
 const Card = styled.div`
-  margin: auto;
+  width: 50%;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-self: flex-start;
 `;
+
 const NameItem = styled.div`
   font-weight: bold;
 `;
@@ -20,13 +27,21 @@ function UserFav() {
 
   const result = favItem.map((item) => {
     return (
-      <Card>
-        <NameItem>{item.name}</NameItem>
-        <div>{item.price}</div>
-      </Card>
+      <div>
+        <Card>
+          <NameItem>{item.name}</NameItem>
+          <div>{item.price}$</div>
+          <ShoppingCartIcon />
+        </Card>
+      </div>
     );
   });
-  return <div>{result}</div>;
+  return (
+    <div>
+      <Title>Your favorite</Title>
+      <div>{result}</div>
+    </div>
+  );
 }
 
 export default UserFav;

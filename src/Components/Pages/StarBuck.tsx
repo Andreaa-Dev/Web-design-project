@@ -11,7 +11,7 @@ import Twitter from "../Img&Video/StarBuck/twitter.png";
 const Style = styled.div`
   display: flex;
   flex-direction: table;
-  margin-top: 2rem;
+  margin: 3rem;
 `;
 
 const Text = styled.div`
@@ -47,22 +47,23 @@ const Button = styled.button`
 
 const ClipPath = styled.div`
   background: ${(props) => (props.color ? props.color : "#1fa449")};
-  height: 45rem;
-  width: 40rem;
+  height: 35rem;
+  width: 35rem;
   position: absolute;
-  margin-left: 50rem;
+  margin-left: 45rem;
+  margin-top: 10rem;
   clip-path: circle(570px at right 700px);
   z-index: -10;
 `;
 const MainImg = styled.img`
-  margin: 4rem 2rem 1rem 7rem;
-  transform: rotate(-7deg);
+  margin: 1rem 5rem 1rem 7rem;
+  transform: rotate(-15deg);
 `;
 const ImgBox = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-left: 35rem;
+  margin-left: 25rem;
   margin-top: 0rem;
   align-items: center;
   transform: translateX(-10%);
@@ -117,8 +118,8 @@ const IconCard = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
-  margin-left: 80rem;
-  margin-top: 10rem;
+  margin-left: 72rem;
+  margin-top: 12rem;
 `;
 
 function StarBuck() {

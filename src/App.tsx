@@ -16,7 +16,7 @@ import UserFav from "./Components/MainPages/UserFav";
 const Card = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 1rem;
+  grid-column-gap: 2rem;
   margin: 6rem;
 `;
 const Title = styled.h1`

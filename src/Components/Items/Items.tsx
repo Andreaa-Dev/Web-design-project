@@ -19,20 +19,29 @@ const Card = styled.div`
   margin: 2rem;
 `;
 
+const Item = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
 const Img = styled.img`
-  height: 12rem;
-  width: 20rem;
+  height: 15rem;
+  width: 25rem;
   border-radius: 7px;
 `;
 
 const Title = styled.div`
-  font-size: 1.7rem;
+  font-size: 2rem;
   margin-top: 1rem;
   font-weight: bold;
 `;
 
+const Text = styled.p`
+  font-size: 1.2rem;
+`;
+
 const Button = styled.button`
-  height: 2rem;
+  height: 3rem;
   width: 5rem;
   border-radius: 1.2rem;
   background-color: #2b2929;
@@ -52,13 +61,24 @@ type ItemProps = {
   item: DataType;
 };
 
+type ColorType = {
+  favIcon: "disabled" | "primary" | "secondary";
+  addIcon: "disabled" | "primary" | "secondary";
+  buyIcon: "disabled" | "primary" | "secondary";
+};
+
 function Items(props: ItemProps) {
   const { item } = props;
   const dispatch = useDispatch();
 
-  const [iconColor, setIconColor] = useState<"secondary">();
-  const onClickHandler = () => {
-    setIconColor("secondary");
+  const [iconColor, setIconColor] = useState<ColorType>({
+    favIcon: "disabled",
+    addIcon: "disabled",
+    buyIcon: "disabled",
+  });
+  const onClickHandler = (event: any) => {
+    // setIconColor();
+    console.log(event.target, "id");
     dispatch(addOrder(item.id));
   };
 
@@ -66,20 +86,22 @@ function Items(props: ItemProps) {
     <div>
       <Card>
         <Img src={item.img} alt="error" />
-        <Title>{item.name}</Title>
-        <Icon>
+        <Item>
+          <Title>{item.name}</Title>
+          <Text>{item.price}$</Text>
+        </Item>
+        <Icon onClick={onClickHandler}>
           <Link to={`/pages/${item.id}`}>
             <Button>Explore</Button>
           </Link>
-          <p>{item.price}$</p>
           <Fab size="small">
-            <FavoriteIcon color={iconColor} onClick={onClickHandler} />
+            <FavoriteIcon id="favIcon" color={iconColor.favIcon} />
           </Fab>
           <Fab size="small">
-            <GetAppIcon />
+            <GetAppIcon id="addIcon" color={iconColor.addIcon} />
           </Fab>
           <Fab size="small">
-            <ShoppingCartIcon onClick={() => dispatch(addOrder(item.id))} />
+            <ShoppingCartIcon id="buyIcon" color={iconColor.buyIcon} />
           </Fab>
         </Icon>
       </Card>
