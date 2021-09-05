@@ -12,6 +12,7 @@ import Pages from "./Components/Pages/Pages";
 import Login from "./Components/MainPages/Login";
 import UserAccount from "./Components/MainPages/UserAccount";
 import UserFav from "./Components/MainPages/UserFav";
+import Register from "./Components/MainPages/Register";
 
 const Card = styled.div`
   display: grid;
@@ -56,6 +57,9 @@ function App() {
         </Route>
         <Route exact path="/home/favorite">
           <UserFav />
+        </Route>
+        <Route exact path="/home/register">
+          <Register />
         </Route>
       </Switch>
     </div>

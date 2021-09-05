@@ -52,24 +52,29 @@ function Login() {
     });
   };
 
-  const submitHandler = () => {};
+  const submitHandler = (event: any) => {};
+
   return (
     <Card>
       <Title>LOG IN </Title>
       <form className={classes.root} onChange={userDataHandler}>
-        <TextField
-          id="userName"
-          label="Name"
-          multiline
-          className={classes.input}
-        />
-        <TextField
-          id="email"
-          label="Email"
-          placeholder="gmail.com"
-          multiline
-          className={classes.input}
-        />
+        <form>
+          <TextField
+            id="userName"
+            label="Name"
+            multiline
+            className={classes.input}
+          />
+        </form>
+        <form>
+          <TextField
+            id="email"
+            label="Email"
+            placeholder="gmail.com"
+            multiline
+            className={classes.input}
+          />
+        </form>
       </form>
       <Button onClick={submitHandler}>Log in</Button>
     </Card>
