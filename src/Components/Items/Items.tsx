@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 import { DataType } from "../../data";
 
+import { addOrder, addFavItem } from "../Redux/action";
+import { useDispatch } from "react-redux";
+
+import styled from "styled-components";
+import { makeStyles } from "@material-ui/core/styles";
 import Fab from "@material-ui/core/Fab";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import GetAppIcon from "@material-ui/icons/GetApp";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import { addOrder, addFavItem } from "../Redux/action";
-import { useDispatch } from "react-redux";
 
 const Card = styled.div`
   display: flex;
@@ -24,6 +26,7 @@ const Item = styled.div`
   flex-direction: row;
   justify-content: space-between;
 `;
+
 const Img = styled.img`
   height: 15rem;
   width: 25rem;
@@ -57,6 +60,12 @@ const Icon = styled.div`
   align-items: center;
 `;
 
+const SmallIcon = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
 type ItemProps = {
   item: DataType;
 };
@@ -67,7 +76,19 @@ type ColorType = {
   buyIcon: "disabled" | "primary" | "secondary";
 };
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    marginTop: "1rem",
+  },
+
+  icon: {
+    marginLeft: "1rem",
+  },
+}));
+
 function Items(props: ItemProps) {
+  const classes = useStyles();
+
   const { item } = props;
   const dispatch = useDispatch();
 
@@ -90,19 +111,22 @@ function Items(props: ItemProps) {
           <Title>{item.name}</Title>
           <Text>{item.price}$</Text>
         </Item>
+
         <Icon onClick={onClickHandler}>
           <Link to={`/pages/${item.id}`}>
             <Button>Explore</Button>
           </Link>
-          <Fab size="small">
-            <FavoriteIcon id="favIcon" color={iconColor.favIcon} />
-          </Fab>
-          <Fab size="small">
-            <GetAppIcon id="addIcon" color={iconColor.addIcon} />
-          </Fab>
-          <Fab size="small">
-            <ShoppingCartIcon id="buyIcon" color={iconColor.buyIcon} />
-          </Fab>
+          <SmallIcon>
+            <Fab size="small" className={classes.icon}>
+              <FavoriteIcon id="favIcon" color={iconColor.favIcon} />
+            </Fab>
+            <Fab size="small" className={classes.icon}>
+              <GetAppIcon id="addIcon" color={iconColor.addIcon} />
+            </Fab>
+            <Fab size="small" className={classes.icon}>
+              <ShoppingCartIcon id="buyIcon" color={iconColor.buyIcon} />
+            </Fab>
+          </SmallIcon>
         </Icon>
       </Card>
     </div>
