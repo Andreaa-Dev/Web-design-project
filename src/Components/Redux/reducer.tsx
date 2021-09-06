@@ -1,6 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { addOrder, addFavItem } from "./action";
-
+import { addOrder, addFavItem, addIcon } from "./action";
 import data, { DataType } from "../../data";
 
 type InitialStateType = {

@@ -1,18 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import HomeIcon from "@material-ui/icons/Home";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import LockOpenIcon from "@material-ui/icons/LockOpen";
-import InfoIcon from "@material-ui/icons/Info";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import logo from "../Img&Video/feather.png";
 
 const Card = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #000000;
-  background: linear-gradient(to top, black, #353434);
   color: white;
 `;
 
@@ -23,44 +17,28 @@ const SmallNav = styled.div`
   align-items: center;
   width: 35rem;
 `;
-const Logo = styled.h1`
-  font-family: "ZCOOL KuaiLe", cursive;
+const Logo = styled.img`
+  height: 5rem;
+  width: 5rem;
+  margin: 2rem;
 `;
 
-const Button = styled.button`
-  border: 1px solid white;
-  border-radius: 0.5rem;
-  padding: 0.4rem;
+const CustomLink = styled(Link)`
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 `;
 
 function NavBarStyle1() {
   return (
     <Card>
-      <Logo>ANDREA</Logo>
+      <Logo src={logo} alt="error" />
       <SmallNav>
-        <Link to="/">
-          <Button>
-            <HomeIcon />
-          </Button>
-        </Link>
-        <Button>
-          <InfoIcon />
-        </Button>
-        <Link to="/home/favorite">
-          <Button>
-            <FavoriteIcon />
-          </Button>
-        </Link>
-        <Link to="/home/login">
-          <Button>
-            <LockOpenIcon />
-          </Button>
-        </Link>
-        <Link to="/home/account">
-          <Button>
-            <AccountCircleIcon />
-          </Button>
-        </Link>
+        <CustomLink to="/">HOME</CustomLink>
+        <CustomLink to="/home/product">PRODUCTS</CustomLink>
+        <CustomLink to="/home/favorite">FAVORITE</CustomLink>
+        <CustomLink to="/home/login">LOG IN </CustomLink>
+        <CustomLink to="/home/account">ACCOUNT</CustomLink>
       </SmallNav>
     </Card>
   );

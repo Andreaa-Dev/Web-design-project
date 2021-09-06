@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { DataType } from "../../data";
-
 import { addOrder, addFavItem } from "../Redux/action";
 import { useDispatch } from "react-redux";
 
@@ -44,7 +43,7 @@ const Text = styled.p`
 `;
 
 const Button = styled.button`
-  height: 3rem;
+  height: 2.5rem;
   width: 5rem;
   border-radius: 1.2rem;
   background-color: #2b2929;
@@ -99,8 +98,8 @@ function Items(props: ItemProps) {
   });
   const onClickHandler = (event: any) => {
     // setIconColor();
-    console.log(event.target, "id");
-    dispatch(addOrder(item.id));
+    console.log(event.target.id, "id");
+    //dispatch(addOrder(item.id));
   };
 
   return (
@@ -117,7 +116,11 @@ function Items(props: ItemProps) {
             <Button>Explore</Button>
           </Link>
           <SmallIcon>
-            <Fab size="small" className={classes.icon}>
+            <Fab
+              size="small"
+              className={classes.icon}
+              onClick={() => console.log("run")}
+            >
               <FavoriteIcon id="favIcon" color={iconColor.favIcon} />
             </Fab>
             <Fab size="small" className={classes.icon}>

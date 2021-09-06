@@ -77,7 +77,12 @@ function Register() {
 
   return (
     <MainCard>
-      <Title>Register</Title>
+      <Title>Create Account</Title>
+      <div>
+        <button>Google</button>
+        <button>Facebook</button>
+      </div>
+      <div>- OR -</div>
       <div className={classes.root}>
         <form className={classes.card} onChange={userRegisterHandler}>
           <TextField
