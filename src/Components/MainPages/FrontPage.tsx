@@ -5,9 +5,10 @@ import NavBar from "../NavBar/NavBarStyle1";
 import Footer from "../Footer/Footer";
 import styled from "styled-components";
 import frontPageImg from "../Img&Video/FrontPage/frontPageImg.jpeg";
+import mainPage from "../Img&Video/FrontPage/backGround1.jpeg";
 
 const BackGroundImg = styled.div`
-  background: url(${frontPageImg});
+  background: url(${mainPage});
   /* background-size: contain; */
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,6 +28,7 @@ const Title = styled.h1`
 const Text = styled.p`
   color: white;
   margin-left: 15rem;
+  font-size: 1rem;
 `;
 
 const Button = styled.button`
