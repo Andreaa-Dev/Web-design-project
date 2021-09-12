@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import NavBar from "../NavBar/NavBarStyle1";
 import Footer from "../Footer/Footer";
 import styled from "styled-components";
-import frontPageImg from "../Img&Video/FrontPage/frontPageImg.jpeg";
-import mainPage from "../Img&Video/FrontPage/backGround1.jpeg";
+import mainPage from "../Img&Video/FrontPage/background.jpeg";
 
 const BackGroundImg = styled.div`
   background: url(${mainPage});
@@ -50,7 +49,7 @@ function FrontPage() {
       <Title>MAKE IT</Title>
       <Text>Everything you need to grow your business online.</Text>
       <Text>Start your free website trial today. No credit card required.</Text>
-      <Link to="/product">
+      <Link to="/home/product">
         <Button>GET STARTED</Button>
       </Link>
       <Footer />

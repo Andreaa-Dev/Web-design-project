@@ -18,7 +18,7 @@ function App() {
         <Route exact path="/">
           <FrontPage />
         </Route>
-        <Route exact path="/product">
+        <Route exact path="/home/product">
           <Product data={data} />
         </Route>
         <Route exact path="/pages/:id">

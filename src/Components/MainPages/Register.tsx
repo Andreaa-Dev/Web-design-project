@@ -5,6 +5,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import "@date-io/date-fns";
 import TextField from "@material-ui/core/TextField";
 import { KeyboardDatePicker } from "@material-ui/pickers";
+import google from "../Img&Video/Register/google.png";
+import facebook from "../Img&Video/Register/facebook.png";
 
 const MainCard = styled.div`
   display: flex;
@@ -14,6 +16,26 @@ const MainCard = styled.div`
 
 const Title = styled.h1`
   text-align: center;
+`;
+
+const Item = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+`;
+
+const ItemCard = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem;
+  width: 25%;
+`;
+
+const Logo = styled.img`
+  height: 2rem;
+  width: 2rem;
+  margin: 1rem;
 `;
 
 const Button = styled.button`
@@ -50,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
 function Register() {
   const classes = useStyles();
   const [selectedDate, setSelectedDate] = React.useState<Date | null>(
-    new Date("2021-08-18T21:11:54")
+    new Date("2021-01-01T21:11:54")
   );
 
   const handleDateChange = (date: Date | null) => {
@@ -78,10 +100,16 @@ function Register() {
   return (
     <MainCard>
       <Title>Create Account</Title>
-      <div>
-        <button>Google</button>
-        <button>Facebook</button>
-      </div>
+      <ItemCard>
+        <Item>
+          <Logo src={google} alt="error" />
+          <p>Google</p>
+        </Item>
+        <Item>
+          <Logo src={facebook} alt="error" />
+          <p>Facebook</p>
+        </Item>
+      </ItemCard>
       <div>- OR -</div>
       <div className={classes.root}>
         <form className={classes.card} onChange={userRegisterHandler}>
