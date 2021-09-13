@@ -1,33 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import NavBar from "../NavBar/NavBarStyle1";
 import Footer from "../Footer/Footer";
 import styled from "styled-components";
-import mainPage from "../Img&Video/FrontPage/background.jpeg";
-
-const BackGroundImg = styled.div`
-  background: url(${mainPage});
-  /* background-size: contain; */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100vw;
-  height: 100vh;
-`;
 
 const Title = styled.h1`
   font-size: 3rem;
   color: white;
-  margin-left: 15rem;
-  margin-top: 3rem;
+  margin-left: 55rem;
   margin-bottom: 3rem;
+  margin-top: 5rem;
+  @media (max-width: 900px) {
+    margin-left: 20rem;
+  }
 `;
 
 const Text = styled.p`
   color: white;
-  margin-left: 15rem;
+  margin-left: 55rem;
   font-size: 1rem;
+  @media (max-width: 768px) {
+    margin-left: 20rem;
+  }
 `;
 
 const Button = styled.button`
@@ -39,13 +33,15 @@ const Button = styled.button`
   background-color: white;
   margin-top: 1rem;
   margin-bottom: 7rem;
-  margin-left: 15rem;
+  margin-left: 55rem;
+  @media (max-width: 768px) {
+    margin-left: 20rem;
+  }
 `;
 
 function FrontPage() {
   return (
-    <BackGroundImg>
-      <NavBar />
+    <div>
       <Title>MAKE IT</Title>
       <Text>Everything you need to grow your business online.</Text>
       <Text>Start your free website trial today. No credit card required.</Text>
@@ -53,7 +49,7 @@ function FrontPage() {
         <Button>GET STARTED</Button>
       </Link>
       <Footer />
-    </BackGroundImg>
+    </div>
   );
 }
 

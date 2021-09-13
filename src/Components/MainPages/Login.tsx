@@ -14,6 +14,7 @@ const Card = styled.div`
 
 const Title = styled.h1`
   text-align: center;
+  margin-top: 2rem;
 `;
 
 const Button = styled.button`
@@ -34,11 +35,12 @@ const Button = styled.button`
 const useStyles = makeStyles((theme) => ({
   root: {
     "& .TextField-root": {
-      width: "35ch",
+      marginTop: "1rem",
     },
   },
   input: {
     marginTop: "1rem",
+    width: "30ch",
   },
 }));
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
+import NavBar from "./Components/NavBar/NavBarStyle1";
 import FrontPage from "./Components/MainPages/FrontPage";
 import Product from "./Components/MainPages/Product";
 import Pages from "./Components/Pages/Pages";
@@ -11,9 +12,21 @@ import Register from "./Components/MainPages/Register";
 
 import data from "./data";
 
+import background from "./Components/Img&Video/FrontPage/bg.jpeg";
+import styled from "styled-components";
+
+const BackGroundImg = styled.div`
+  background: url(${background});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  min-height: 100vh;
+`;
 function App() {
   return (
-    <div className="App">
+    <BackGroundImg>
+      <NavBar />
       <Switch>
         <Route exact path="/">
           <FrontPage />
@@ -37,7 +50,7 @@ function App() {
           <Register />
         </Route>
       </Switch>
-    </div>
+    </BackGroundImg>
   );
 }
 

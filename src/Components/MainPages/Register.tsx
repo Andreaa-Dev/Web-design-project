@@ -16,12 +16,14 @@ const MainCard = styled.div`
 
 const Title = styled.h1`
   text-align: center;
+  margin-top: 4rem;
 `;
 
 const Item = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 `;
 
 const ItemCard = styled.div`
@@ -30,6 +32,7 @@ const ItemCard = styled.div`
   justify-content: space-between;
   margin: 2rem;
   width: 25%;
+  align-items: center;
 `;
 
 const Logo = styled.img`
@@ -94,7 +97,7 @@ function Register() {
   };
 
   const registerHandler = async () => {
-    await axios.post("http://localhost:5000/user", userRegister);
+    await axios.post("http://localhost:5000/register", userRegister);
   };
 
   return (

@@ -7,7 +7,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color: white;
+  align-items: center;
 `;
 
 const SmallNav = styled.div`
@@ -18,9 +18,9 @@ const SmallNav = styled.div`
   width: 35rem;
 `;
 const Logo = styled.img`
-  height: 5rem;
-  width: 5rem;
-  margin: 2rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  margin: 1.5rem;
 `;
 
 const CustomLink = styled(Link)`
@@ -38,6 +38,7 @@ function NavBarStyle1() {
         <CustomLink to="/home/product">PRODUCTS</CustomLink>
         <CustomLink to="/home/favorite">FAVORITE</CustomLink>
         <CustomLink to="/home/login">LOG IN </CustomLink>
+        <CustomLink to="/home/register">REGISTER</CustomLink>
         <CustomLink to="/home/account">ACCOUNT</CustomLink>
       </SmallNav>
     </Card>
