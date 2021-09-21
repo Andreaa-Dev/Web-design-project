@@ -15,17 +15,18 @@ import data from "./data";
 import background from "./Components/Img&Video/FrontPage/bg.jpeg";
 import styled from "styled-components";
 
-const BackGroundImg = styled.div`
-  background: url(${background});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100vw;
-  min-height: 100vh;
-`;
+// const BackGroundImg = styled.div`
+//   background: url(${background});
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   width: 100vw;
+//   min-height: 100vh;
+// `;
+
 function App() {
   return (
-    <BackGroundImg>
+    <div>
       <NavBar />
       <Switch>
         <Route exact path="/">
@@ -50,7 +51,7 @@ function App() {
           <Register />
         </Route>
       </Switch>
-    </BackGroundImg>
+    </div>
   );
 }
 

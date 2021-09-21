@@ -1,8 +1,6 @@
 import React from "react";
 //@ts-ignore
 import beach from "../Img&Video/Beach.mp4";
-// import styled from "styled-components"
-// const Card=styled.div`
 
 function Beach() {
   return (

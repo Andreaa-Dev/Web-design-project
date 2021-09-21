@@ -1,11 +1,13 @@
 import React from "react";
+import { useParams } from "react-router";
+
 import Beach from "./Beach";
 import Leica from "./Leica";
 import Roseanne from "./Roseanne";
 import StarBuck from "./StarBuck";
 import Smoothies from "./Smoothies";
 import Trio from "./Trio";
-import { useParams } from "react-router";
+import Gooddy from "./Gooddy";
 
 function Pages() {
   const { id } = useParams<{ id: string }>();
@@ -25,8 +27,11 @@ function Pages() {
   }
   if (id === "5") {
     return <Smoothies />;
-  } else {
+  }
+  if (id === "6") {
     return <Beach />;
+  } else {
+    return <Gooddy />;
   }
 }
 

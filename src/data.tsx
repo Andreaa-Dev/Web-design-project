@@ -4,6 +4,7 @@ import Roseanne from "./Components/Img&Video/Roseanne.png";
 import Smoothies from "./Components/Img&Video/Smoothies.png";
 import Beaches from "./Components/Img&Video/Beaches.jpg";
 import Trio from "./Components/Img&Video/IL-Trio Restaurant/IL-Trio.png";
+import Gooddy from "./Components/Img&Video/Gooddy.jpeg";
 
 export type DataType = {
   name: string;
@@ -58,6 +59,13 @@ const data: DataType[] = [
     description: "Animate background",
     price: 31.99,
     id: 6,
+  },
+  {
+    name: "Gooddy",
+    img: Gooddy,
+    description: "Animation",
+    price: 24.09,
+    id: 7,
   },
 ];
 export default data;
