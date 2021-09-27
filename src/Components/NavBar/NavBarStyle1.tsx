@@ -25,7 +25,7 @@ const Logo = styled.img`
 
 const CustomLink = styled(Link)`
   text-decoration: none;
-  color: white;
+  color: black;
   font-weight: bold;
 `;
 

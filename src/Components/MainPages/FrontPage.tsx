@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const Title = styled.h1`
   font-size: 3rem;
-  color: white;
+  color: black;
   margin-left: 55rem;
   margin-bottom: 3rem;
   margin-top: 5rem;
@@ -16,7 +16,7 @@ const Title = styled.h1`
 `;
 
 const Text = styled.p`
-  color: white;
+  color: black;
   margin-left: 55rem;
   font-size: 1rem;
   @media (max-width: 768px) {
