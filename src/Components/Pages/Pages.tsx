@@ -9,6 +9,9 @@ import Smoothies from "./Smoothies";
 import Trio from "./Trio";
 import Gooddy from "./Gooddy";
 import Resto from "./Resto"
+import Travelly from "./Travelly";
+import Fitness from "./Fitness"
+
 
 function Pages() {
   const { id } = useParams<{ id: string }>();
@@ -34,8 +37,14 @@ function Pages() {
   }
   if (id === "7") {
       return <Gooddy />;
-  } else {
+  }
+  if (id === "8") {
     return <Resto />;
+} 
+if (id === "9") {
+  return <Travelly />;
+} else {
+    return <Fitness/>;
   }
 }
 

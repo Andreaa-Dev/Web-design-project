@@ -6,6 +6,8 @@ import Beaches from "./Components/Img&Video/Beaches.jpg";
 import Trio from "./Components/Img&Video/IL-Trio Restaurant/IL-Trio.png";
 import Gooddy from "./Components/Img&Video/Gooddy.jpeg";
 import Resto from "./Components/Img&Video/Resto.png"
+import Travelly from "./Components/Img&Video/Travelly.png"
+import Fitness from "./Components/Img&Video/Fitness.png"
 
 export type DataType = {
   name: string;
@@ -64,7 +66,7 @@ const data: DataType[] = [
   {
     name: "Gooddy",
     img: Gooddy,
-    description: "Animation",
+    description: "Gatsby with animation",
     price: 24.09,
     id: 7,
   },
@@ -74,6 +76,20 @@ const data: DataType[] = [
     description: "Animation",
     price: 22.07,
     id: 8,
+  },
+  {
+    name: "Travelly",
+    img: Travelly,
+    description: "Front and pictures",
+    price: 18.95,
+    id: 9,
+  },
+  {
+    name: "Fitness",
+    img: Fitness,
+    description: "updating ...",
+    price: 21.90,
+    id: 10,
   },
 ];
 export default data;

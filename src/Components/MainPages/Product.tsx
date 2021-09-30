@@ -5,9 +5,12 @@ import styled from "styled-components";
 
 const Card = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 2rem;
   margin: 6rem;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 type ProductType = {
