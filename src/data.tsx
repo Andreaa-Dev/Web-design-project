@@ -5,6 +5,7 @@ import Smoothies from "./Components/Img&Video/Smoothies.png";
 import Beaches from "./Components/Img&Video/Beaches.jpg";
 import Trio from "./Components/Img&Video/IL-Trio Restaurant/IL-Trio.png";
 import Gooddy from "./Components/Img&Video/Gooddy.jpeg";
+import Resto from "./Components/Img&Video/Resto.png"
 
 export type DataType = {
   name: string;
@@ -66,6 +67,13 @@ const data: DataType[] = [
     description: "Animation",
     price: 24.09,
     id: 7,
+  },
+  {
+    name: "Resto",
+    img: Resto,
+    description: "Animation",
+    price: 22.07,
+    id: 8,
   },
 ];
 export default data;

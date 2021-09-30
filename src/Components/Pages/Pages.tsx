@@ -8,6 +8,7 @@ import StarBuck from "./StarBuck";
 import Smoothies from "./Smoothies";
 import Trio from "./Trio";
 import Gooddy from "./Gooddy";
+import Resto from "./Resto"
 
 function Pages() {
   const { id } = useParams<{ id: string }>();
@@ -30,8 +31,11 @@ function Pages() {
   }
   if (id === "6") {
     return <Beach />;
+  }
+  if (id === "7") {
+      return <Gooddy />;
   } else {
-    return <Gooddy />;
+    return <Resto />;
   }
 }
 
