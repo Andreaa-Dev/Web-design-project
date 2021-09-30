@@ -6,21 +6,21 @@ import styled from "styled-components";
 
 const Title = styled.h1`
   font-size: 3rem;
-  color: black;
-  margin-left: 55rem;
+  color: white;
+  margin-left: 50rem;
   margin-bottom: 3rem;
   margin-top: 5rem;
-  @media (max-width: 900px) {
-    margin-left: 20rem;
+  @media (max-width: 1200px) {
+    margin-left: 22rem;
   }
 `;
 
 const Text = styled.p`
-  color: black;
-  margin-left: 55rem;
+  color: white;
+  margin-left: 50rem;
   font-size: 1rem;
-  @media (max-width: 768px) {
-    margin-left: 20rem;
+  @media (max-width: 1200px) {
+    margin-left: 22rem;
   }
 `;
 
@@ -33,9 +33,9 @@ const Button = styled.button`
   background-color: white;
   margin-top: 1rem;
   margin-bottom: 7rem;
-  margin-left: 55rem;
-  @media (max-width: 768px) {
-    margin-left: 20rem;
+  margin-left: 50rem;
+  @media (max-width: 1200px) {
+    margin-left: 22rem;
   }
 `;
 

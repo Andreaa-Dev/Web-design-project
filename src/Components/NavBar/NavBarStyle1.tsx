@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../Img&Video/feather.png";
+import logo from "../Img&Video/behance.png";
 
 const Card = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-right: 3rem;
 `;
 
 const SmallNav = styled.div`
@@ -25,7 +26,7 @@ const Logo = styled.img`
 
 const CustomLink = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: bold;
 `;
 

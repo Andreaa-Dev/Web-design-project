@@ -10,6 +10,7 @@ const FooterCard = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: space-between;
+  margin-top: 8.5rem;
 `;
 
 const Img = styled.img`
