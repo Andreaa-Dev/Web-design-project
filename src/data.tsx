@@ -5,9 +5,10 @@ import Smoothies from "./Components/Img&Video/Smoothies.png";
 import Beaches from "./Components/Img&Video/Beaches.jpg";
 import Trio from "./Components/Img&Video/IL-Trio Restaurant/IL-Trio.png";
 import Gooddy from "./Components/Img&Video/Gooddy.jpeg";
-import Resto from "./Components/Img&Video/Resto.png"
-import Travelly from "./Components/Img&Video/Travelly.png"
-import Fitness from "./Components/Img&Video/Fitness.png"
+import Resto from "./Components/Img&Video/Resto.png";
+import Travelly from "./Components/Img&Video/Travelly.png";
+import Fitness from "./Components/Img&Video/Fitness.png";
+import Andrea from "./Components/Img&Video/Andrea.png";
 
 export type DataType = {
   name: string;
@@ -88,8 +89,15 @@ const data: DataType[] = [
     name: "Fitness",
     img: Fitness,
     description: "updating ...",
-    price: 21.90,
+    price: 21.9,
     id: 10,
+  },
+  {
+    name: "Andrea",
+    img: Andrea,
+    description: "using Figma to design",
+    price: 15.78,
+    id: 11,
   },
 ];
 export default data;
